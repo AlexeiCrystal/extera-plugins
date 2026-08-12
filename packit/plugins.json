@@ -1,0 +1,25 @@
+{
+  "plugins": [ 
+    {
+      "id": "extera_custom_name_icon",
+      "name": "Custom name & icon",
+      "author": "@AlexeiCrystal",
+      "version": "1.1",
+      "state": "release",
+      "icon": "exteragram/0",
+      "size": "17 KB",
+      "description": "**EN:** Allows you to set a custom name and icon for the client in the recent apps menu and on the launcher\n**RU:** Позволяет установить кастомное имя и иконку клиента в меню недавних приложений и на рабочем столе",
+      "hash": "1c37a0729c6ddb206965754afe90aa9d5d9876b5be07ef29406035c83853759c",
+      "bithash": "bffe4b6638403922",
+      "release_date": "31.07.26",
+      "update_date": "01.08.26",
+      "link": "https://release-assets.githubusercontent.com/github-production-release-asset/1317173071/d54c78c5-2672-4f00-93cc-3e402f7ab86a?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-08-12T08%3A16%3A49Z&rscd=attachment%3B+filename%3Dextera_custom_name_icon.plugin&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-08-12T07%3A16%3A04Z&ske=2026-08-12T08%3A16%3A49Z&sks=b&skv=2018-11-09&sig=xtKzkccpZIBsG%2FTgk4IAwCIsoaLWH%2BcC6yroT3yCUE8%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4NjUxOTI2NCwibmJmIjoxNzg2NTE4OTY0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.iRygtgG0ngOpCxvqIX749iz3JpuCAWATJdKnwBaBdm4&response-content-disposition=attachment%3B%20filename%3Dextera_custom_name_icon.plugin&response-content-type=application%2Foctet-stream",
+      "team": [
+        [
+          "1169951070",
+          "Maintainer"
+        ]
+      ],
+    }
+  ]
+}
