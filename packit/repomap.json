@@ -7,6 +7,6 @@
     "rm_rid": "crystal"
   },
   "repomap": {
-    "plugins": "https://raw.githubusercontent.com/AlexeiCrystal/extera-plugins/main/packit/plugins.json"
+    "plugins": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/packit/plugins.json"
   }
 }
