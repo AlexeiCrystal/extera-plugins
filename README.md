@@ -2,5 +2,5 @@
 ExteraGram Plugin Catalog
 
 ```
-tg://packit?repo=add&name=Crystal&link=https://raw.githubusercontent.com/AlexeiCrystal/extera-plugins/refs/heads/main/packit/repomap.json
+tg://packit?repo=add&name=Crystal&link=https://github.com/AlexeiCrystal/extera-plugins/raw/main/packit/repomap.json
 ```
