@@ -1,0 +1,94 @@
+__id__ = "extera_no_feed_ads"
+__name__ = "No Feed Ads"
+__description__ = """**EN:** Removes ads from the exteraGram feed
+**RU:** Убирает рекламу из ленты exteraGram
+
+[Github](https://github.com/AlexeiCrystal/extera-no-feed-ads)"""
+__version__ = "1.0"
+__author__ = "@AlexeiCrystal"
+__icon__ = "TgPremiumIcon/67"
+__app_version__ = ">=12.9.0"
+__min_version__ = "12.9.0"
+
+from base_plugin import BasePlugin, MethodHook
+from hook_utils import find_class
+from java.lang import Boolean
+from java.util import ArrayList
+
+class ReturnFalseHook(MethodHook):
+    def before_hooked_method(self, param):
+        param.setResult(Boolean(False))
+
+class ReturnNullHook(MethodHook):
+    def before_hooked_method(self, param):
+        param.setResult(None)
+
+class ReturnEmptyListHook(MethodHook):
+    def before_hooked_method(self, param):
+        param.setResult(ArrayList())
+
+class ClearAdsHook(MethodHook):
+    def after_hooked_method(self, param):
+        if param.thisObject is not None and hasattr(param.thisObject, "clear"):
+            try:
+                param.thisObject.clear()
+            except:
+                pass
+
+class Plugin(BasePlugin):
+    def __init__(self):
+        super().__init__()
+        self._hooks = []
+
+    def on_plugin_load(self):
+        controller_cls = find_class("com.exteragram.messenger.feed.ads.FeedAdController")
+        injector_cls = find_class("com.exteragram.messenger.feed.ads.FeedAdInjector")
+        parser_cls = find_class("com.exteragram.messenger.feed.ads.FeedAdParser")
+
+        if controller_cls is not None:
+            try:
+                from client_utils import get_user_config
+                currentAccount = get_user_config().selectedAccount
+                instance = controller_cls.getInstance(currentAccount)
+                if instance is not None and hasattr(instance, "eligibleAds"):
+                    instance.eligibleAds.clear()
+            except:
+                pass
+
+            res = self.hook_all_methods(controller_cls, "isEnabled", ReturnFalseHook())
+            if res:
+                if isinstance(res, list):
+                    self._hooks.extend(res)
+                else:
+                    self._hooks.append(res)
+
+            res = self.hook_all_methods(controller_cls, "nextAd", ReturnNullHook())
+            if res:
+                if isinstance(res, list):
+                    self._hooks.extend(res)
+                else:
+                    self._hooks.append(res)
+
+        if injector_cls is not None:
+            res = self.hook_all_methods(injector_cls, "refresh", ClearAdsHook())
+            if res:
+                if isinstance(res, list):
+                    self._hooks.extend(res)
+                else:
+                    self._hooks.append(res)
+
+        if parser_cls is not None:
+            res = self.hook_all_methods(parser_cls, "parse", ReturnEmptyListHook())
+            if res:
+                if isinstance(res, list):
+                    self._hooks.extend(res)
+                else:
+                    self._hooks.append(res)
+
+    def on_plugin_unload(self):
+        for hook in self._hooks:
+            try:
+                self.unhook_method(hook)
+            except:
+                pass
+        self._hooks.clear()
