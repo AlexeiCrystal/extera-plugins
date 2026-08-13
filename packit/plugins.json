@@ -1,0 +1,40 @@
+{
+  "plugins": [
+    {
+      "id": "extera_custom_name_icon",
+      "name": "Custom Name & Icon",
+      "version": "1.1",
+      "author": "@AlexeiCrystal",
+      "sdk_version": ">=1.4.3.3",
+      "icon": "exteraGram/0",
+      "description": "**EN:** Allows you to set a custom name and icon for the client in the recent apps menu and on the launcher\n**RU:** Позволяет установить кастомное имя и иконку клиента в меню недавних приложений и на рабочем столе",
+      "app_version": ">=11.12.0",
+      "hash": "280a5621719ae2ee504c6142776e0bcb68724a1f2e4687ef9550cc10b512ef87",
+      "bithash": "8bce5874553f2d54",
+      "size": "17 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/extera_custom_name_icon_1.1.plugin",
+      "state": "release",
+      "update_date": "13.08.2026",
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ]
+      },
+      "team": [
+        [
+          "1169951070",
+          "Developer"
+        ]
+      ],
+      "release_date": "13.08.2026",
+      "versions": {
+        "1.1": {
+          "app_version": ">=11.12.0",
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/extera_custom_name_icon_1.1.plugin",
+          "size": "17 KB"
+        }
+      }
+    }
+  ]
+}
