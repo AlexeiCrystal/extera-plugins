@@ -1,0 +1,450 @@
+__id__ = "extera_easter_eggs_protector"
+__name__ = "Easter Eggs Protector"
+__version__ = "2.0"
+__min_version__ = "11.12.0"
+__app_version__ = ">=11.12.0"
+__sdk_version__ = ">=1.4.3.3"
+__author__ = "@ayugram_easter"
+__icon__ = "AllTheMemes/0"
+__description__ = """
+**EN:** The plugin protects against opening [AyuGram](https://t.me/ayugram) and [PackIt](https://t.me/packitx) Easter eggs and blocking unwanted volume changes
+**RU:** Плагин защищает от открытия пасхалок [AyuGram](https://t.me/ayugram) и [PackIt](https://t.me/packitx) и блокирует нежелательное изменение громкости
+"""
+
+import time
+import traceback
+from base_plugin import BasePlugin, MethodReplacement, MethodHook
+from hook_utils import find_class
+from client_utils import get_last_fragment
+from ui.alert import AlertDialogBuilder
+from android_utils import run_on_ui_thread
+from android.util import Log
+from ui.settings import Header, Text, Switch, Divider
+from java.util import Locale
+from com.exteragram.messenger.plugins import PluginsController
+
+try:
+    from intents import IntentsManager as IM
+    HAS_INTENTS = True
+except ImportError:
+    IM = None
+    HAS_INTENTS = False
+
+MAX_PRIORITY = 200000
+MIN_INTENT_PRIORITY = -200000
+LOG_TAG = __name__
+
+TARGET_PATHS = {
+    "tg://ayu/train",
+    "tg://ayu/xiaomi",
+    "tg://ayu/relax",
+    "tg://ayu/augh",
+    "tg://ayu/pipe",
+    "tg://ayu/saul",
+    "tg://ayu/komaru",
+    "tg://ayu/lobster",
+    "tg://xiaomi",
+    "tg://nya",
+    "tg://packit?premium",
+    "tg://packit?terraria",
+    "tg://packit?aytist",
+    "t.me/ayugram_easter",
+    "https://t.me/ayugram_easter",
+    "http://t.me/ayugram_easter",
+}
+
+HANDLER_CLASSES = (
+    "com.radolyn.ayugram.AyuInAppHandlers",
+    "com.radolyn.ayugram.utils.AyuInAppHandlers",
+)
+
+HANDLER_METHODS = (
+    "handleAyu",
+    "handleXiaomi",
+    "handleNekogram",
+)
+
+GITHUB_URL = "https://github.com/AlexeiCrystal/extera-easter-eggs-protector"
+
+LOCALIZED = {
+    "ru": {
+        "settings_header": "Основное",
+        "show_dialog": "Показывать уведомления",
+        "show_dialog_sub": "Показывать уведомления при блокировке пасхалок или изменений громкости",
+        "sounds_header": "Звуки",
+        "block_volume": "Блокировать изменение громкости",
+        "block_volume_sub": "Блокировать запросы от клиента на изменение громкости чтобы пасхалки не могли включать неприятные звуки на всю громкость",
+        "volume_blocked_toast": "Заблокировано изменение громкости",
+        "block_volume_info": "На всякий случай если вдруг пасхалка всё же как-то активировалась",
+        "easter_egg_blocked_toast": "Заблокирована пасхалка",
+        "info_header": "Информация",
+        "open_github": "GitHub",
+    },
+    "en": {
+        "settings_header": "Main",
+        "show_dialog": "Show notifications",
+        "show_dialog_sub": "Show notifications when easter eggs or volume changes are blocked",
+        "sounds_header": "Sounds",
+        "block_volume": "Block volume change",
+        "block_volume_sub": "Block volume changes requests from client so easter eggs cannot turn on unpleasant sounds at full volume",
+        "volume_blocked_toast": "Volume change blocked",
+        "block_volume_info": "Just in case the easter egg somehow got activated after all",
+        "easter_egg_blocked_toast": "Easter egg blocked",
+        "info_header": "Info",
+        "open_github": "GitHub",
+    },
+}
+
+def log_info(message: str):
+    Log.i(LOG_TAG, f"[Easter Eggs Protector] {message}")
+
+def log_error(message: str):
+    Log.e(LOG_TAG, f"[Easter Eggs Protector] {message}")
+
+def _get_lang():
+    try:
+        if Locale:
+            lang = Locale.getDefault().getLanguage()
+            return "ru" if str(lang).lower().startswith("ru") else "en"
+    except Exception:
+        pass
+    return "en"
+
+def _t(key: str, **kwargs) -> str:
+    lang = _get_lang()
+    block = LOCALIZED.get(lang, LOCALIZED["en"])
+    text = block.get(key, LOCALIZED["en"].get(key, ""))
+    try:
+        return text.format(**kwargs)
+    except Exception:
+        return text
+
+def is_url_blocked(url: str) -> bool:
+    if not url:
+        return False
+    if url in ("tg://ayu", "tg://ayu/"):
+        return True
+    for target in TARGET_PATHS:
+        if url.startswith(target) or target in url:
+            return True
+    return False
+
+class NoOpReplacement(MethodReplacement):
+    def __init__(self, plugin):
+        self.plugin = plugin
+
+    def replace_hooked_method(self, param):
+        if hasattr(param, "args") and param.args:
+            for i in range(len(param.args)):
+                param.args[i] = None
+        self.plugin.show_easter_egg_toast()
+        return None
+
+class AudioManagerHook(MethodHook):
+    def __init__(self, plugin):
+        super().__init__()
+        self.plugin = plugin
+
+    def before_hooked_method(self, param):
+        if not self.plugin.get_setting("block_volume", False):
+            return
+
+        param.setResult(None)
+        if hasattr(param, "args") and param.args:
+            for i in range(len(param.args)):
+                param.args[i] = None
+
+        if self.plugin.get_setting("show_dialog", True):
+            self.plugin.show_volume_toast()
+
+class _BrowserOpenUrlHook(MethodHook):
+    def __init__(self, plugin):
+        super().__init__()
+        self.plugin = plugin
+
+    def before_hooked_method(self, param):
+        try:
+            if not hasattr(param, "args") or not param.args:
+                return
+
+            is_blocked = False
+            for arg in param.args:
+                if arg is not None and is_url_blocked(str(arg)):
+                    is_blocked = True
+                    break
+
+            if is_blocked:
+                param.setResult(None)
+                for i in range(len(param.args)):
+                    param.args[i] = None
+                self.plugin.show_easter_egg_toast()
+        except Exception:
+            log_error("BrowserOpenUrlHook error: " + traceback.format_exc())
+
+class _DeepLinkHookAyu(MethodHook):
+    def __init__(self, plugin):
+        super().__init__()
+        self.plugin = plugin
+
+    def before_hooked_method(self, param):
+        try:
+            if not hasattr(param, "args") or not param.args:
+                return
+            intent = param.args[0]
+            if not intent or not intent.getData():
+                return
+            url = str(intent.getData())
+
+            if is_url_blocked(url):
+                try:
+                    intent.setData(None)
+                except Exception:
+                    pass
+                param.setResult(None)
+                for i in range(len(param.args)):
+                    param.args[i] = None
+                self.plugin.show_easter_egg_toast()
+
+        except Exception:
+            log_error("DeepLinkHook error: " + traceback.format_exc())
+
+class EasterEggsProtectorPlugin(BasePlugin):
+    def __init__(self):
+        super().__init__()
+        self.unhook_deeplink = None
+        self._unhooks = []
+        self._intent_handles = []
+        self._last_toast_time = 0
+        self._last_ee_toast_time = 0
+
+    def on_plugin_load(self):
+        log_info("Plugin loaded.")
+        controller = PluginsController.getInstance()
+        controller.setPluginEnabled("ayu_rofls", False, None)
+        self._setup_intents_manager()
+        self._setup_deeplink_hook()
+        self._hook_ayu_handlers()
+        self._hook_audio_manager()
+        self._hook_browser()
+
+    def on_plugin_unload(self):
+        for handle in self._intent_handles:
+            try:
+                handle.unhandle()
+            except Exception:
+                pass
+        self._intent_handles.clear()
+
+        if self.unhook_deeplink:
+            try:
+                self.unhook_method(self.unhook_deeplink)
+            except Exception:
+                pass
+            self.unhook_deeplink = None
+
+        for unhook in list(self._unhooks):
+            try:
+                self.unhook_method(unhook)
+            except Exception:
+                pass
+        self._unhooks.clear()
+
+        log_info("Plugin unloaded.")
+
+    def show_volume_toast(self):
+        now = time.time()
+        if now - self._last_toast_time < 2.0:
+            return
+        self._last_toast_time = now
+
+        def _show():
+            try:
+                from android.widget import Toast
+                from org.telegram.messenger import ApplicationLoader
+                context = ApplicationLoader.applicationContext
+                if context:
+                    Toast.makeText(context, _t("volume_blocked_toast"), Toast.LENGTH_SHORT).show()
+            except Exception as e:
+                log_error("Failed to show volume toast: " + str(e))
+
+        run_on_ui_thread(_show)
+
+    def show_easter_egg_toast(self):
+        if not self.get_setting("show_dialog", True):
+            return
+
+        now = time.time()
+        if now - self._last_ee_toast_time < 2.0:
+            return
+        self._last_ee_toast_time = now
+
+        def _show():
+            try:
+                from android.widget import Toast
+                from org.telegram.messenger import ApplicationLoader
+                context = ApplicationLoader.applicationContext
+                if context:
+                    Toast.makeText(context, _t("easter_egg_blocked_toast"), Toast.LENGTH_SHORT).show()
+            except Exception as e:
+                log_error("Failed to show easter egg toast: " + str(e))
+
+        run_on_ui_thread(_show)
+
+    def _setup_intents_manager(self):
+        if not HAS_INTENTS or IM is None:
+            return
+
+        def on_tg_intent(intent=None, **kwargs):
+            if intent and intent.getData():
+                url = str(intent.getData())
+                if is_url_blocked(url):
+                    try:
+                        intent.setData(None)
+                    except Exception:
+                        pass
+                    self.show_easter_egg_toast()
+                    return True
+            return None
+
+        try:
+            handle = IM.new_global_before_handler(
+                on_tg_intent,
+                scheme="tg",
+                priority=MIN_INTENT_PRIORITY,
+            )
+            self._intent_handles.append(handle)
+            log_info("IntentsManager handler registered successfully.")
+        except Exception as exc:
+            log_error(f"Failed to register IntentsManager handler: {exc}")
+
+    def _setup_deeplink_hook(self):
+        try:
+            launch_activity_cls = find_class("org.telegram.ui.LaunchActivity")
+            method = launch_activity_cls.getClass().getDeclaredMethod(
+                "handleIntent",
+                find_class("android.content.Intent"),
+                find_class("java.lang.Boolean").TYPE,
+                find_class("java.lang.Boolean").TYPE,
+                find_class("java.lang.Boolean").TYPE,
+                find_class("org.telegram.messenger.browser.Browser$Progress"),
+                find_class("java.lang.Boolean").TYPE,
+                find_class("java.lang.Boolean").TYPE
+            )
+            self.unhook_deeplink = self.hook_method(method, _DeepLinkHookAyu(self), priority=MAX_PRIORITY)
+        except Exception:
+            try:
+                metod2 = launch_activity_cls.getClass().getDeclaredMethod("handleIntent", find_class("android.content.Intent"))
+                self.unhook_deeplink = self.hook_method(metod2, _DeepLinkHookAyu(self), priority=MAX_PRIORITY)
+            except Exception:
+                log_error("Failed to hook LaunchActivity.handleIntent for Ayu links.")
+
+    def _hook_ayu_handlers(self):
+        for class_name in HANDLER_CLASSES:
+            clazz = find_class(class_name)
+            if clazz is None:
+                continue
+            for method_name in HANDLER_METHODS:
+                self._unhooks.extend(
+                    self.hook_all_methods(
+                        clazz,
+                        method_name,
+                        NoOpReplacement(self),
+                        priority=MAX_PRIORITY,
+                    ) or []
+                )
+        log_info("Ayu handlers hooked successfully")
+
+    def _hook_audio_manager(self):
+        audio_cls = find_class("android.media.AudioManager")
+        if audio_cls is None:
+            log_error("AudioManager class not found.")
+            return
+
+        methods_to_hook = [
+            "adjustVolume",
+            "adjustStreamVolume",
+            "setStreamVolume",
+            "adjustSuggestedStreamVolume"
+        ]
+
+        for method_name in methods_to_hook:
+            res = self.hook_all_methods(
+                audio_cls,
+                method_name,
+                AudioManagerHook(self),
+                priority=MAX_PRIORITY
+            )
+            if res:
+                if isinstance(res, list):
+                    self._unhooks.extend(res)
+                else:
+                    self._unhooks.append(res)
+        log_info("AudioManager methods hooked successfully")
+
+    def _hook_browser(self):
+        browser_cls = find_class("org.telegram.messenger.browser.Browser")
+        if browser_cls is None:
+            log_error("Browser class not found.")
+            return
+
+        res = self.hook_all_methods(
+            browser_cls,
+            "openUrl",
+            _BrowserOpenUrlHook(self),
+            priority=MAX_PRIORITY
+        )
+        if res:
+            if isinstance(res, list):
+                self._unhooks.extend(res)
+            else:
+                self._unhooks.append(res)
+        log_info("Browser.openUrl hooked successfully")
+
+    def _on_toggle_setting(self, key: str, default_val: bool, value: bool):
+        self.set_setting(key, value, reload_settings=True)
+
+    def create_settings(self):
+        def open_github(v):
+            fragment = get_last_fragment()
+            activity = fragment.getParentActivity() if fragment else None
+            if not activity:
+                return
+            from org.telegram.messenger.browser import Browser
+            from android.net import Uri
+            Browser.openUrl(activity, Uri.parse(GITHUB_URL))
+
+        return [
+            Header(text=_t("settings_header")),
+            Switch(
+                key="show_dialog",
+                text=_t("show_dialog"),
+                default=True,
+                subtext=_t("show_dialog_sub"),
+                icon="msg_info",
+                on_change=lambda key, val: self._on_toggle_setting("show_dialog", True, val),
+                link_alias="show_dialog",
+            ),
+            Header(text=_t("sounds_header")),
+            Switch(
+                key="block_volume",
+                text=_t("block_volume"),
+                default=False,
+                subtext=_t("block_volume_sub"),
+                icon="msg_mute",
+                on_change=lambda key, val: self._on_toggle_setting("block_volume", False, val),
+                link_alias="block_volume",
+            ),
+            Divider(text=_t("block_volume_info")),
+            Header(text=_t("info_header")),
+            Text(
+                text=_t("open_github"),
+                on_click=open_github,
+                icon="msg_link",
+                link_alias="open_github"
+            ),
+            Text(
+                text=__name__ + " v" + __version__,
+                icon="msg_info",
+                link_alias="info"
+            )
+        ]
