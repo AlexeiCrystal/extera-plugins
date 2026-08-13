@@ -70,6 +70,36 @@
           "size": "3.16 KB"
         }
       }
+    },
+    {
+      "id": "extera_easter_eggs_protector",
+      "name": "Easter Eggs Protector",
+      "version": "2.0",
+      "author": "@ayugram_easter",
+      "sdk_version": ">=1.4.3.3",
+      "icon": "AllTheMemes/0",
+      "description": "\n**EN:** The plugin protects against opening [AyuGram](https://t.me/ayugram) and [PackIt](https://t.me/packitx) Easter eggs and blocking unwanted volume changes\n**RU:** Плагин защищает от открытия пасхалок [AyuGram](https://t.me/ayugram) и [PackIt](https://t.me/packitx) и блокирует нежелательное изменение громкости\n",
+      "app_version": ">=11.12.0",
+      "hash": "f33cb1dff410733e0ba883819e28899fb56bfb9c0aa5c63e105da6ffac000d0b",
+      "bithash": "fd215ec52cb65d8d",
+      "size": "15.33 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/extera_easter_eggs_protector.plugin",
+      "state": "release",
+      "update_date": "13.08.2026",
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ]
+      },
+      "release_date": "13.08.2026",
+      "versions": {
+        "2.0": {
+          "app_version": ">=11.12.0",
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/extera_easter_eggs_protector.plugin",
+          "size": "15.33 KB"
+        }
+      }
     }
   ]
 }
