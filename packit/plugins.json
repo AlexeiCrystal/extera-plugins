@@ -35,6 +35,41 @@
           "size": "17 KB"
         }
       }
+    },
+    {
+      "id": "extera_no_feed_ads",
+      "name": "No Feed Ads",
+      "version": "1.0",
+      "author": "@AlexeiCrystal",
+      "icon": "TgPremiumIcon/67",
+      "description": "**EN:** Removes ads from the exteraGram feed\n**RU:** Убирает рекламу из ленты exteraGram\n\n[Github](https://github.com/AlexeiCrystal/extera-no-feed-ads)",
+      "app_version": ">=12.9.0",
+      "hash": "1ca8c6c40cfdee5d4e68615b6dcad8a60b5bfc1f89f15a0b2eb1a6e84f42a388",
+      "bithash": "f3edd3b7d474bad5",
+      "size": "3.16 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/extera_no_feed_ads_1.0.plugin",
+      "state": "release",
+      "update_date": "13.08.2026",
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ]
+      },
+      "team": [
+        [
+          "1169951070",
+          "Developer"
+        ]
+      ],
+      "release_date": "13.08.2026",
+      "versions": {
+        "1.0": {
+          "app_version": ">=12.9.0",
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/extera_no_feed_ads_1.0.plugin",
+          "size": "3.16 KB"
+        }
+      }
     }
   ]
 }
