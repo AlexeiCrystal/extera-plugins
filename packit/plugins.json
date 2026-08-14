@@ -501,6 +501,40 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "account_hider",
+      "name": "AccountHider",
+      "version": "1.0.1",
+      "author": "@RnPlugins",
+      "sdk_version": ">=1.4.3.3",
+      "icon": "RnDev/10",
+      "description": "Скрывает выбранные аккаунты из системных диалогов выбора аккаунта.",
+      "app_version": ">=12.5.1",
+      "hash": "2d28a62d37de3ee05bb22470ef929fe9eb0b6a8fd920074d6bc625995ecd7680",
+      "bithash": "ddd6bc0eb8731e1a",
+      "size": "49.14 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/account_hider_1.0.1.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {
+        "1.0.1": {
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/account_hider_1.0.1.plugin",
+          "size": "49.14 KB",
+          "app_version": ">=12.5.1"
+        }
+      },
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python",
+          "Java"
+        ]
+      }
     }
   ]
 }
