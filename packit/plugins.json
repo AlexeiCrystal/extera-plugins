@@ -308,6 +308,45 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "delete_from_gallery",
+      "name": "Delete From Gallery",
+      "version": "1.0",
+      "author": "@itNotMax - @MaxExteraPlugins",
+      "sdk_version": ">=1.4.3.3",
+      "icon": "MaxExteraPluginsStickers/23",
+      "description": "Adds a Delete button to the attachment media picker menu.\\nPermanently removes selected photos/videos from the device gallery.",
+      "app_version": ">=12.0.1",
+      "hash": "ec8fcd51ecdeeab305ceb23c984032ad559a561d99820262768c6f59fa67527d",
+      "bithash": "6a5ec070f9f3b7d3",
+      "size": "9.09 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/delete_from_gallery_1.0.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {
+        "1.0": {
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/delete_from_gallery_1.0.plugin",
+          "size": "9.09 KB",
+          "app_version": ">=12.0.1"
+        }
+      },
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      },
+      "team": [
+        [
+          "929185014",
+          "Developer"
+        ]
+      ]
     }
   ]
 }
