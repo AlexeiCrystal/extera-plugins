@@ -164,7 +164,13 @@
           "exteraGram",
           "AyuGram"
         ]
-      }
+      },
+      "team": [
+        [
+          "6914257655",
+          "Developer"
+        ]
+      ]
     }
   ]
 }
