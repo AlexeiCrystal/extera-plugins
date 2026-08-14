@@ -163,7 +163,9 @@
         "clients": [
           "exteraGram",
           "AyuGram"
-        ]
+        ],
+        "langs": ["Python", "Java"],
+        "source_links": "https://github.com/Hazzz895/ExteraPluginsAssets/blob/main/forwards/dex/src/main/java/com/pessdes/forwards/Main.java"
       },
       "team": [
         [
