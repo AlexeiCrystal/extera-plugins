@@ -347,6 +347,38 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "EasyShortcuts",
+      "name": "Easy Shortcuts",
+      "version": "1.3.9",
+      "author": "@meiji_dev • @meijinolife",
+      "icon": "MeijiPlugins/2",
+      "description": "Ultimate text automation with triggers, collections.",
+      "app_version": ">=11.12.0",
+      "hash": "b1093fc6fefb1af02ea656b9ab0e50639e01c5ea98ed7b17c1c438b166d82acc",
+      "bithash": "54d4530197781417",
+      "size": "52.13 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/EasyShortcuts_1.3.9.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {
+        "1.3.9": {
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/EasyShortcuts_1.3.9.plugin",
+          "size": "52.13 KB",
+          "app_version": ">=11.12.0"
+        }
+      },
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      }
     }
   ]
 }
