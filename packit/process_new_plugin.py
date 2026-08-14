@@ -26,6 +26,7 @@ know_authors = {
     "@nonPlugins": "3551573748",
     "@itskotovski": "75671920",
     "@mihailkotovski & @mishabotov": "75671920",
+    "@mishabotov & @itskotovski": ""75671920",
     "@shareui": "400216230",
     "@shareui(@doctashare)": "400216230",
     "@itNotMax - @MaxExteraPlugins": "929185014",
