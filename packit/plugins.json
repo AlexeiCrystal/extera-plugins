@@ -490,6 +490,38 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "articleViewerFix",
+      "name": "ArticleViewerFix",
+      "version": "1.0.0",
+      "author": "@bleizix",
+      "icon": "exteraIcons/2",
+      "description": "Отключает надоедливый свайп закрытия (слева вправо) в браузере. \\n\\nDisables annoying browser",
+      "app_version": ">=11.12.0",
+      "hash": "9d3b2fe43912e6c03455d05153b8e15cbbdc014aefe44ce673fda79b30b36f0c",
+      "bithash": "244788e95cac0af0",
+      "size": "992 B",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/articleViewerFix_1.0.0.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {},
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      },
+      "team": [
+        [
+          "1348136086",
+          "Developer"
+        ]
+      ]
     }
   ]
 }
