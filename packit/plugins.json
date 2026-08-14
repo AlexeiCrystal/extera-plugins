@@ -553,6 +553,32 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "second_voice",
+      "name": "Таймер голосовых: прошедшее/общее",
+      "version": "1.2.2",
+      "author": "@buligaEplugins & @incLu_01",
+      "icon": "BuligaPlugins/3",
+      "description": "Заменяет стандартный таймер у голосовых сообщений на формат ",
+      "app_version": ">=11.12.0",
+      "hash": "ee49395ece1eaf6dd4b40540d83b13fab63a03de954b5f6dc8e44e1e660b98ad",
+      "bithash": "f0c42278ec8b336a",
+      "size": "18.9 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/second_voice_1.2.2.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {},
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      }
     }
   ]
 }
