@@ -194,6 +194,7 @@
           "app_version": ">=12.1.1"
         }
       },
+      "forked": ["LegacyGram", "https://github.com/repinek/LegacyGram"]
       "sources": {
         "clients": [
           "exteraGram",
@@ -201,8 +202,8 @@
         ],
         "langs": ["Python"],
         "license": "MIT",
-        "source_links": "https://github.com/nonFeature/LegacyGram",
-        "bug_reports": "https://github.com/nonFeature/LegacyGram/issues"
+        "source_links": "https://github.com/nonFeature/LiteGram",
+        "bug_reports": "https://github.com/nonFeature/LiteGram/issues"
       },
       "team": [
         [
