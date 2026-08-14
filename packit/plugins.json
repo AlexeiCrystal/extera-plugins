@@ -385,6 +385,45 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "folders_below",
+      "name": "Folders Below",
+      "version": "3.0",
+      "author": "@PESSDES_Plugins",
+      "icon": "VoiceToText7/15",
+      "description": "Moves folders bar to the bottom of the chat list",
+      "app_version": ">=12.8.1",
+      "hash": "bbfc6cf71b802b7b60f569bcc3642249d07bbf7cdf707f8846afc1e1477186d7",
+      "bithash": "20a7dbb00a906b5b",
+      "size": "17.41 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/folders_below_3.0.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {
+        "3.0": {
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/folders_below_3.0.plugin",
+          "size": "17.41 KB",
+          "app_version": ">=12.8.1"
+        }
+      },
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python",
+          "Java"
+        ]
+      },
+      "team": [
+        [
+          "6914257655",
+          "Developer"
+        ]
+      ]
     }
   ]
 }
