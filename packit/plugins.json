@@ -425,6 +425,45 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "participants_channels",
+      "name": "Participants Channels",
+      "version": "4.4",
+      "author": "@itNotMax - @MaxExteraPlugins",
+      "sdk_version": ">=1.4.3.3",
+      "icon": "MaxExteraPluginsStickers/19",
+      "description": "Adds a **Channels** tab to the group/channel profile showing participants",
+      "app_version": ">=12.1.1",
+      "hash": "4bfd70af5f8b27a4ff56f4d44577c21371ac326c3e58381f65d904bf9e7f6aea",
+      "bithash": "1e8c2ddfca0f8533",
+      "size": "74.32 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/participants_channels_4.4.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {
+        "4.4": {
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/participants_channels_4.4.plugin",
+          "size": "74.32 KB",
+          "app_version": ">=12.1.1"
+        }
+      },
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      },
+      "team": [
+        [
+          "929185014",
+          "Developer"
+        ]
+      ]
     }
   ]
 }
