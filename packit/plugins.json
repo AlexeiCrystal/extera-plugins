@@ -464,6 +464,43 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "anti_spoiler",
+      "name": "Anti-Spoiler",
+      "version": "2.0 [dex]",
+      "author": "@mihailkotovski & @mishabotov",
+      "icon": "UtyaDuck/57",
+      "description": "автоматически раскрывает текстовые и медиа-спойлеры",
+      "hash": "27f155ce6e4b0aec543603585f287db8f1c406f04a99b3e2bc06a865c284cd44",
+      "bithash": "cccbde9e10dc3b5f",
+      "size": "16.92 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/anti_spoiler_2.0.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {
+        "2.0 [dex]": {
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/anti_spoiler_2.0.plugin",
+          "size": "16.92 KB"
+        }
+      },
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python",
+          "Java"
+        ]
+      },
+      "team": [
+        [
+          "75671920",
+          "Developer"
+        ]
+      ]
     }
   ]
 }
