@@ -19,7 +19,8 @@
         "clients": [
           "exteraGram",
           "AyuGram"
-        ]
+        ],
+        "langs": ["Python"]
       },
       "team": [
         [
@@ -54,7 +55,8 @@
         "clients": [
           "exteraGram",
           "AyuGram"
-        ]
+        ],
+        "langs": ["Python"]
       },
       "team": [
         [
@@ -90,7 +92,8 @@
         "clients": [
           "exteraGram",
           "AyuGram"
-        ]
+        ],
+        "langs": ["Python"]
       },
       "release_date": "13.08.2026",
       "versions": {
@@ -128,7 +131,8 @@
         "clients": [
           "exteraGram",
           "AyuGram"
-        ]
+        ],
+        "langs": ["Python"]
       },
       "team": [
         [
