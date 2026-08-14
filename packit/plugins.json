@@ -270,6 +270,44 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "shareui_nmhttps",
+      "name": "NoMoreHttps",
+      "version": "1.0.0",
+      "author": "@shareui(@doctashare)",
+      "icon": "exteraPlugins/1",
+      "description": "Удаляет http:// и https:// из отправляемых ссылок.",
+      "app_version": ">=11.12.0",
+      "hash": "1ee2d80602e8b46b96938f58388ff6bbb003f8eb73cbdc39ded3a3acd73478f0",
+      "bithash": "7f0fcf4521e1b6eb",
+      "size": "947 B",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/shareui_nmhttps_1.0.0.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {
+        "1.0.0": {
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/shareui_nmhttps_1.0.0.plugin",
+          "size": "947 B",
+          "app_version": ">=11.12.0"
+        }
+      },
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      },
+      "team": [
+        [
+          "400216230",
+          "Developer"
+        ]
+      ]
     }
   ]
 }
