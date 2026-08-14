@@ -183,6 +183,7 @@ def parse_plugin_content(binary_data: bytes, file_path: str) -> dict:
     desc_match = re.search(r'__description__\s*=\s*(?:"""(.*?)"""|\'\'\'(.*?)\'\'\'|["\']([^"\']+)["\'])', text_content, re.DOTALL)
     if desc_match:
         desc_val = next(g for g in desc_match.groups() if g is not None)
+        desc_val = desc_val.replace('\\n', '\n')
         temp_dict["description"] = desc_val
 
     min_ver_match = re.search(r'__min_version__\s*=\s*["\']([^"\']+)["\']', text_content)
