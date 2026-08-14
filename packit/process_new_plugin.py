@@ -20,6 +20,7 @@ know_authors = {
     "@AlexeiCrystal": "1169951070",
     "@PESSDES_Plugins": "6914257655",
     "@YouRooni": "855890735",
+    "@RnPlugins": "855890735",
     "@nonPlugins": "3551573748",
     "@itskotovski": "75671920",
     "@mihailkotovski & @mishabotov": "75671920",
