@@ -100,6 +100,36 @@
           "app_version": ">=11.12.0"
         }
       }
+    },
+    {
+      "id": "compact_bottom_nav",
+      "name": "CompactBottomNav",
+      "version": "1.0.0",
+      "author": "@YouRooni",
+      "sdk_version": ">=1.4.3.3",
+      "icon": "RnDev/18",
+      "description": "Компактная нижняя панель без подписей и с плавающей кнопкой поиска.",
+      "app_version": ">=12.6.4",
+      "hash": "dd589eee6a612e8d82e092c84bf5aaf3d786a02dacd5197b855fbcd444c792e1",
+      "bithash": "4a9a49f4bc42e6da",
+      "size": "37.69 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/compact_bottom_nav_1.0.0.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {
+        "1.0.0": {
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/compact_bottom_nav_1.0.0.plugin",
+          "size": "37.69 KB",
+          "app_version": ">=12.6.4"
+        }
+      },
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ]
+      }
     }
   ]
 }
