@@ -129,7 +129,13 @@
           "exteraGram",
           "AyuGram"
         ]
-      }
+      },
+      "team": [
+        [
+          "855890735",
+          "Developer"
+        ]
+      ]
     }
   ]
 }
