@@ -136,6 +136,35 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "forwards",
+      "name": "Forwards",
+      "version": "1.2",
+      "author": "@PESSDES_Plugins",
+      "icon": "HalloDuck/64",
+      "description": "Shows how many times messages were forwarded",
+      "app_version": ">=11.12.0",
+      "hash": "b0f1e13418bb5be0c5271f7ff4cf28b55ae9510f2de8696f5974a56705a10fc7",
+      "bithash": "695712a9568492ce",
+      "size": "19.53 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/forwards_1.2.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {
+        "1.2": {
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/forwards_1.2.plugin",
+          "size": "19.53 KB",
+          "app_version": ">=11.12.0"
+        }
+      },
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ]
+      }
     }
   ]
 }
