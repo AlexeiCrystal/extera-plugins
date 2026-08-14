@@ -194,7 +194,7 @@
           "app_version": ">=12.1.1"
         }
       },
-      "forked": ["LegacyGram", "https://github.com/repinek/LegacyGram"]
+      "forked": ["LegacyGram", "https://github.com/repinek/LegacyGram"],
       "sources": {
         "clients": [
           "exteraGram",
