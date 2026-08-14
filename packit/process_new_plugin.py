@@ -17,7 +17,10 @@ PURGEABLE_META_KEYS = ["name", "icon", "version", "author", "description", "app_
 ALWAYS_UPDATE_KEYS = ["id", "hash", "bithash", "size", "link", "state", "update_date"]
 
 know_authors = {
-    "@AlexeiCrystal": "1169951070"
+    "@AlexeiCrystal": "1169951070",
+    "@PESSDES_Plugins": "6914257655",
+    "@YouRooni": "855890735",
+    "@nonPlugins": "3551573748"
 }
 
 def calculate_bithash(data: bytes, seed: int = 0) -> str:
