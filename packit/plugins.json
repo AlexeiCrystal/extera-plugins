@@ -31,13 +31,7 @@
         ]
       ],
       "release_date": "13.08.2026",
-      "versions": {
-        "1.1": {
-          "app_version": ">=11.12.0",
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/extera_custom_name_icon_1.1.plugin",
-          "size": "17 KB"
-        }
-      }
+      "versions": {}
     },
     {
       "id": "extera_no_feed_ads",
@@ -69,13 +63,7 @@
         ]
       ],
       "release_date": "13.08.2026",
-      "versions": {
-        "1.0": {
-          "app_version": ">=12.9.0",
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/extera_no_feed_ads_1.0.plugin",
-          "size": "3.16 KB"
-        }
-      }
+      "versions": {}
     },
     {
       "id": "extera_easter_eggs_protector",
@@ -102,13 +90,7 @@
         ]
       },
       "release_date": "13.08.2026",
-      "versions": {
-        "2.0": {
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/extera_easter_eggs_protector_2.0.plugin",
-          "size": "15.33 KB",
-          "app_version": ">=11.12.0"
-        }
-      }
+      "versions": {}
     },
     {
       "id": "compact_bottom_nav",
@@ -126,13 +108,7 @@
       "state": "release",
       "update_date": "14.08.2026",
       "release_date": "14.08.2026",
-      "versions": {
-        "1.0.0": {
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/compact_bottom_nav_1.0.0.plugin",
-          "size": "37.69 KB",
-          "app_version": ">=12.6.4"
-        }
-      },
+      "versions": {},
       "sources": {
         "clients": [
           "exteraGram",
@@ -165,13 +141,7 @@
       "state": "release",
       "update_date": "14.08.2026",
       "release_date": "14.08.2026",
-      "versions": {
-        "1.2": {
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/forwards_1.2.plugin",
-          "size": "19.53 KB",
-          "app_version": ">=11.12.0"
-        }
-      },
+      "versions": {},
       "sources": {
         "clients": [
           "exteraGram",
@@ -205,13 +175,7 @@
       "state": "release",
       "update_date": "14.08.2026",
       "release_date": "14.08.2026",
-      "versions": {
-        "1.6.2": {
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/litegram_1.6.2.plugin",
-          "size": "98.41 KB",
-          "app_version": ">=12.1.1"
-        }
-      },
+      "versions": {},
       "forked": [
         "LegacyGram",
         "https://github.com/repinek/LegacyGram"
@@ -249,12 +213,7 @@
       "state": "beta",
       "update_date": "14.08.2026",
       "release_date": "14.08.2026",
-      "versions": {
-        "1.0 [beta]": {
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/plugin_settings_translate_1.0_beta.plugin",
-          "size": "58.01 KB"
-        }
-      },
+      "versions": {},
       "sources": {
         "clients": [
           "exteraGram",
@@ -286,13 +245,7 @@
       "state": "release",
       "update_date": "14.08.2026",
       "release_date": "14.08.2026",
-      "versions": {
-        "1.0.0": {
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/shareui_nmhttps_1.0.0.plugin",
-          "size": "947 B",
-          "app_version": ">=11.12.0"
-        }
-      },
+      "versions": {},
       "sources": {
         "clients": [
           "exteraGram",
@@ -325,13 +278,7 @@
       "state": "release",
       "update_date": "14.08.2026",
       "release_date": "14.08.2026",
-      "versions": {
-        "1.0": {
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/delete_from_gallery_1.0.plugin",
-          "size": "9.09 KB",
-          "app_version": ">=12.0.1"
-        }
-      },
+      "versions": {},
       "sources": {
         "clients": [
           "exteraGram",
@@ -363,13 +310,7 @@
       "state": "release",
       "update_date": "14.08.2026",
       "release_date": "14.08.2026",
-      "versions": {
-        "1.3.9": {
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/EasyShortcuts_1.3.9.plugin",
-          "size": "52.13 KB",
-          "app_version": ">=11.12.0"
-        }
-      },
+      "versions": {},
       "sources": {
         "clients": [
           "exteraGram",
@@ -401,13 +342,7 @@
       "state": "release",
       "update_date": "14.08.2026",
       "release_date": "14.08.2026",
-      "versions": {
-        "3.0": {
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/folders_below_3.0.plugin",
-          "size": "17.41 KB",
-          "app_version": ">=12.8.1"
-        }
-      },
+      "versions": {},
       "sources": {
         "clients": [
           "exteraGram",
@@ -442,13 +377,7 @@
       "state": "release",
       "update_date": "14.08.2026",
       "release_date": "14.08.2026",
-      "versions": {
-        "4.4": {
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/participants_channels_4.4.plugin",
-          "size": "74.32 KB",
-          "app_version": ">=12.1.1"
-        }
-      },
+      "versions": {},
       "sources": {
         "clients": [
           "exteraGram",
@@ -479,12 +408,7 @@
       "state": "release",
       "update_date": "14.08.2026",
       "release_date": "14.08.2026",
-      "versions": {
-        "2.0 [dex]": {
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/anti_spoiler_2.0.plugin",
-          "size": "16.92 KB"
-        }
-      },
+      "versions": {},
       "sources": {
         "clients": [
           "exteraGram",
@@ -518,13 +442,7 @@
       "state": "release",
       "update_date": "14.08.2026",
       "release_date": "14.08.2026",
-      "versions": {
-        "1.0.1": {
-          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/account_hider_1.0.1.plugin",
-          "size": "49.14 KB",
-          "app_version": ">=12.5.1"
-        }
-      },
+      "versions": {},
       "sources": {
         "clients": [
           "exteraGram",
@@ -541,6 +459,31 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "media_duration_sort",
+      "name": "Media Duration",
+      "version": "1.0",
+      "author": "@mishabotov & @itskotovski",
+      "icon": "Icon1_by_TgEmojis_bot/163",
+      "description": "добавляет в меню общих медиа сортировку видео по длительности",
+      "hash": "1d214d475dbf957043b04eec22845523735f2d4c535b6555e3bd5dce77578535",
+      "bithash": "050e268c73f9e052",
+      "size": "25.77 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/media_duration_sort_1.0.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {},
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      }
     }
   ]
 }
