@@ -198,7 +198,11 @@
         "clients": [
           "exteraGram",
           "AyuGram"
-        ]
+        ],
+        "langs": ["Python"],
+        "license": "MIT",
+        "source_links": "https://github.com/nonFeature/LegacyGram",
+        "bug_reports": "https://github.com/nonFeature/LegacyGram/issues"
       },
       "team": [
         [
