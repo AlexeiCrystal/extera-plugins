@@ -522,6 +522,37 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "shareui_sdkinstaller",
+      "name": "Plugins SDK Installer",
+      "version": "1.0.0",
+      "author": "@shareui",
+      "description": "Select a Chaquopy SDK file and install it",
+      "app_version": ">=12.8.1",
+      "hash": "20e518a7c0a9d0ea3eb0358f7baeaa593018876dcdde7a36d510c99df85938aa",
+      "bithash": "fb5d4d84860c9402",
+      "size": "5.2 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/shareui_sdkinstaller_1.0.plugin",
+      "state": "release",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {},
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      },
+      "team": [
+        [
+          "400216230",
+          "Developer"
+        ]
+      ]
     }
   ]
 }
