@@ -20,7 +20,9 @@
           "exteraGram",
           "AyuGram"
         ],
-        "langs": ["Python"]
+        "langs": [
+          "Python"
+        ]
       },
       "team": [
         [
@@ -56,7 +58,9 @@
           "exteraGram",
           "AyuGram"
         ],
-        "langs": ["Python"]
+        "langs": [
+          "Python"
+        ]
       },
       "team": [
         [
@@ -93,7 +97,9 @@
           "exteraGram",
           "AyuGram"
         ],
-        "langs": ["Python"]
+        "langs": [
+          "Python"
+        ]
       },
       "release_date": "13.08.2026",
       "versions": {
@@ -132,7 +138,10 @@
           "exteraGram",
           "AyuGram"
         ],
-        "langs": ["Python", "Java"]
+        "langs": [
+          "Python",
+          "Java"
+        ]
       },
       "team": [
         [
@@ -168,7 +177,10 @@
           "exteraGram",
           "AyuGram"
         ],
-        "langs": ["Python", "Java"],
+        "langs": [
+          "Python",
+          "Java"
+        ],
         "source_links": "https://github.com/Hazzz895/ExteraPluginsAssets/blob/main/forwards/dex/src/main/java/com/pessdes/forwards/Main.java"
       },
       "team": [
@@ -200,13 +212,18 @@
           "app_version": ">=12.1.1"
         }
       },
-      "forked": ["LegacyGram", "https://github.com/repinek/LegacyGram"],
+      "forked": [
+        "LegacyGram",
+        "https://github.com/repinek/LegacyGram"
+      ],
       "sources": {
         "clients": [
           "exteraGram",
           "AyuGram"
         ],
-        "langs": ["Python"],
+        "langs": [
+          "Python"
+        ],
         "license": "MIT",
         "source_links": "https://github.com/nonFeature/LiteGram",
         "bug_reports": "https://github.com/nonFeature/LiteGram/issues"
@@ -214,6 +231,42 @@
       "team": [
         [
           "1302340931",
+          "Developer"
+        ]
+      ]
+    },
+    {
+      "id": "plugin_settings_translate",
+      "name": "PSTranslate",
+      "version": "1.0 [beta]",
+      "author": "@itskotovski",
+      "icon": "sfsymbols/148",
+      "description": "Выбор языка интерфейса и автоперевод настроек плагинов",
+      "hash": "a85da9f571c469bc949719133014ce33b7b2f52faeeabdc5b156b3aa949f15f7",
+      "bithash": "afc7d396b6d79175",
+      "size": "58.01 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/plugin_settings_translate_1.0_beta.plugin",
+      "state": "beta",
+      "update_date": "14.08.2026",
+      "release_date": "14.08.2026",
+      "versions": {
+        "1.0 [beta]": {
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/plugin_settings_translate_1.0_beta.plugin",
+          "size": "58.01 KB"
+        }
+      },
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      },
+      "team": [
+        [
+          "75671920",
           "Developer"
         ]
       ]
