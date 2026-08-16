@@ -463,18 +463,23 @@
     {
       "id": "media_duration_sort",
       "name": "Media Duration",
-      "version": "1.0",
+      "version": "2.0 [dex]",
       "author": "@mishabotov & @itskotovski",
       "icon": "Icon1_by_TgEmojis_bot/163",
       "description": "добавляет в меню общих медиа сортировку видео по длительности",
-      "hash": "1d214d475dbf957043b04eec22845523735f2d4c535b6555e3bd5dce77578535",
-      "bithash": "050e268c73f9e052",
-      "size": "25.77 KB",
-      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/media_duration_sort_1.0.plugin",
+      "hash": "ce87d5887eefa71ed47e0463bdad817a6b53f17af17d1124153dd8ffdb6d1807",
+      "bithash": "942c32681ded8475",
+      "size": "43.67 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/media_duration_sort_2.0.plugin",
       "state": "release",
-      "update_date": "14.08.2026",
+      "update_date": "16.08.2026",
       "release_date": "14.08.2026",
-      "versions": {},
+      "versions": {
+        "1.0": {
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/media_duration_sort_1.0.plugin",
+          "size": "25.77 KB"
+        }
+      },
       "sources": {
         "clients": [
           "exteraGram",
@@ -489,6 +494,11 @@
           "75671920",
           "Developer"
         ]
+      ],
+      "changelog": [
+        "None",
+        "+140",
+        "-662"
       ]
     },
     {
