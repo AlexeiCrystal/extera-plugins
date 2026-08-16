@@ -579,6 +579,32 @@
           "Python"
         ]
       }
+    },
+    {
+      "id": "deleted_gift_sender",
+      "name": "Deleted Gift Sender",
+      "version": "1.2.1",
+      "author": "@binbash_0",
+      "icon": "binbashPlugins/0",
+      "description": "Небольшой плагин, который позволяет легко отправить уже удаленные (скрытые с ui) подарки, возвращая их в этот самый ui",
+      "app_version": ">=11.12.0",
+      "hash": "0b1b3c168fcbb8234193f36468e6ea21e5fe1106fadfe165982485ba76016b03",
+      "bithash": "a8694ea7ca128d61",
+      "size": "30.81 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/deleted_gifts_sender_1.2.1.plugin",
+      "state": "release",
+      "update_date": "16.08.2026",
+      "release_date": "16.08.2026",
+      "versions": {},
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      }
     }
   ]
 }
