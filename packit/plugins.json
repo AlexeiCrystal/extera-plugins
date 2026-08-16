@@ -655,6 +655,31 @@
           "Developer"
         ]
       ]
+    },
+    {
+      "id": "voice_timing",
+      "name": "Voice Timing",
+      "version": "2.0",
+      "author": "@itskotovski & @mishabotov",
+      "icon": "DateRegBot_by_MoiStikiBot/17",
+      "description": "автоматически добавляет тайминг при ответе на голосовые/видео/музыку.\nautomatically adds timing when replying to voice messages, video messages, and music.",
+      "hash": "7f3e0b9f1541ba168f209007a7e9c359d547734502ad47bfce0f0521f7768440",
+      "bithash": "75a00c804e6acb6a",
+      "size": "17 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/voice_timing_2.0.plugin",
+      "state": "release",
+      "update_date": "16.08.2026",
+      "release_date": "16.08.2026",
+      "versions": {},
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      }
     }
   ]
 }
