@@ -605,6 +605,38 @@
           "Python"
         ]
       }
+    },
+    {
+      "id": "gift_id",
+      "name": "Gift ID",
+      "version": "1.1",
+      "author": "@PESSDES_Plugins",
+      "icon": "VoiceToText7/4",
+      "description": "Shows the gift ID in its info",
+      "app_version": ">=11.12.0",
+      "hash": "f87d409fcf3325ce428ebc3d6eb26276772fa5c221e6a7e701f4bbb076373239",
+      "bithash": "1ad8112c5721d97c",
+      "size": "3.25 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/gift_id_1.1.plugin",
+      "state": "release",
+      "update_date": "16.08.2026",
+      "release_date": "16.08.2026",
+      "versions": {},
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      },
+      "team": [
+        [
+          "6914257655",
+          "Developer"
+        ]
+      ]
     }
   ]
 }
