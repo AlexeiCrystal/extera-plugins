@@ -8,7 +8,7 @@ tg://packit?repo=add&name=Crystal&link=https://github.com/AlexeiCrystal/extera-p
 Wan't to add/update plugin? See [publishing rules](RULES.md)
 
 # Repository structure
-**The [plugins](plugins/) folder contains plugin files**
+**The [plugins](plugins/) folder contains plugin files**  
 **The [packit](packit/) folder contains:**
 - [repomap.json](packit/repomap.json) – the main repository configuration for PackIt
 - [plugins.json](packit/plugins.json) – the list of plugins for PackIt
