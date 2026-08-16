@@ -31,7 +31,8 @@ know_authors = {
     "@shareui(@doctashare)": "400216230",
     "@itNotMax - @MaxExteraPlugins": "929185014",
     "@itNotMax": "929185014",
-    "@bleizix": "1348136086"
+    "@bleizix": "1348136086",
+    "@binbash_0": "7550875337"
 }
 
 def calculate_bithash(data: bytes, seed: int = 0) -> str:
