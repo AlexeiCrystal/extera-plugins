@@ -167,7 +167,7 @@
       "author": "fork: @nonPlugins, origin author: @wepinek",
       "icon": "feature_plugins/8",
       "description": "A highly customizable plugin to **remove paid and bloated features** from Telegram.",
-      "readme": "https://github.com/nonFeature/LiteGram/raw/main/README.md",
+      "readme": "https://github.com/nonFeature/LiteGram/blob/main/README.md",
       "app_version": ">=12.1.1",
       "hash": "9b864ba55e2e1592e34b6e79e589bbb8ac7885800a58d65fb333e1bd453f7f6c",
       "bithash": "e48cdf2406188e9b",
