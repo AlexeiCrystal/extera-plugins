@@ -537,19 +537,25 @@
     },
     {
       "id": "shareui_sdkinstaller",
-      "name": "Plugins SDK Installer",
-      "version": "1.0.0",
+      "name": "Plugins SDK & Elyx Installer",
+      "version": "2.0.0",
       "author": "@shareui",
-      "description": "Select a Chaquopy SDK file and install it",
-      "app_version": ">=12.8.1",
-      "hash": "20e518a7c0a9d0ea3eb0358f7baeaa593018876dcdde7a36d510c99df85938aa",
-      "bithash": "fb5d4d84860c9402",
-      "size": "5.2 KB",
-      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/shareui_sdkinstaller_1.0.plugin",
+      "description": "Select a file and install it: exteraGram SDK or elyxcore plugin",
+      "app_version": ">=12.9.0",
+      "hash": "da6392ff55fd9dceb3bc41645aea3c542b49c127b646ab28fddfe2ab39829f98",
+      "bithash": "1bb13c9db9498c5a",
+      "size": "9.67 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/shareui_sdkinstaller_2.0.0.plugin",
       "state": "release",
-      "update_date": "14.08.2026",
+      "update_date": "18.08.2026",
       "release_date": "14.08.2026",
-      "versions": {},
+      "versions": {
+        "1.0.0": {
+          "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/shareui_sdkinstaller_1.0.plugin",
+          "size": "5.2 KB",
+          "app_version": ">=12.8.1"
+        }
+      },
       "sources": {
         "clients": [
           "exteraGram",
@@ -564,6 +570,12 @@
           "400216230",
           "Developer"
         ]
+      ],
+      "sdk_version": ">=1.4.5.1",
+      "changelog": [
+        "None",
+        "+110",
+        "-10"
       ]
     },
     {
