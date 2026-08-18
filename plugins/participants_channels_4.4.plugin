@@ -1974,23 +1974,3 @@ class _CounterHook(MethodHook):
             self._plugin._on_counter_update(param.thisObject)
         except Exception:
             pass
-
-# __DEX_BEGIN__
-# eNpllU1sG0UUx9/sel07cRzHLSlxUGQtHArEcZzYxnYMgrYUtTIFqVFUVarQZHdjr7tZb73ryAgI
-# QYqgEkLiwgkuXFDFkROquHFDHDly6Q2hInHuIeI/O5PYFZZ/+96+mTfvw5MX2xnPrG/W6Ld/vn9l
-# uee0tK/+/fVG7cfHgfbnifdz7fGbSaKAiMY71TypzwODaIWkPQ3+AthGGUakQW5DzkHakPjS73hs
-# J4ieQF7WiTpgG3TBx+BTcAy+AF+CH8Aj8Dc4AXn4lkAD3AS3wA64A+4CB/SADw7B5+Ab8BD8BB4B
-# fCml8p0BsyJfknkugPPAUPW9pMt6Tt/PqfpW9Yle1aXfObUnr/Q27Do8cyRkip4n2ZPn4vdEvFdI
-# puQiyf2L6n1JyYKSL5DIXe5PnkmNLsRSV5LRcrxf9juhcsoqeRuFHBlyTXyeanJPnvqwZQGL106U
-# PcilYu9EnDsjDQe/Cr1A82QxRg2mYzW/0IdeYBrdLxLqvbQ8x/JaX2NkakmckYZvQb9IfnGWNiij
-# +cUZRMwwP5fBmRkmvbLq9zDiHHIqE6J5XeZyP67qtBL0UZd1TCxES2d7jXhFUz1f0eXvLOsU2ReQ
-# +WncFEiCWcqOX79bWGmzxRwtoh9tKsL8olAKeIzjs4w4QxmHqbvBYlJty3N9N3qDkm0pF66+fbu4
-# P7BHnlP0Btx2bDo/ZRr5ysiuk3690yHWIQ1iqcN9ezhw7bI18CPHj8pXhBxHW5Q/WxpFrlfuDLpb
-# tNaxBvtlLDtDHnijruuH5YAPI9dyA+5H4QdWj/u+44Xld7nrizP6/ICXPe53y+/t9h0retZ2Kxq6
-# Ps5d+p/t8sj1bGe4RWlx0ppYpgvvT4W6oiKRvv3WO8R2SNtBVXcoyYPA8VGoTQlRM2XF89LLRWc4
-# HAxbRUqqTswFH17zRmEPBe+5XVp45vXayPMoFQ1kMpSU/aNv2eHh1cZH5i637iGI2TJtZ2yumuhK
-# 4Ho8cgd+CR134oXdURdLPR6WrJ5j3QtH+6HZ2uNe6Kya+65f4oFrtiqrZtjjpQo81htV3mhWNurc
-# Wa8161at2axUN+292mu8XqvWq3W+t9HYrGzi0ANnGCIWnJprG2vVku0cmJ/gzmAaFNgN9uAo8URn
-# nx0ljhMs/R342mDph+AX8IfBLs7L+67uMpuSpzNWm5qz+tSsTdBk3ho0mblJmsxdVpRzScxeXeni
-# 75/lpL+YdVpRxhKzGXc/9hUzw1C6mB16TurHIpDSxf+B/wCIVfIv
-# __DEX_END__
