@@ -692,6 +692,31 @@
           "Python"
         ]
       }
+    },
+    {
+      "id": "local_pin",
+      "name": "Local Pin",
+      "version": "1.6.1",
+      "author": "@thrzxd • @kotilnya",
+      "description": "Allows you to pin messages locally, even without pin permissions.",
+      "app_version": ">=12.5.1",
+      "hash": "387554084275271279c8b86636506d22d72ad9b76e26fd91707489d8847a594f",
+      "bithash": "ea8f88ddea7ba011",
+      "size": "59.91 KB",
+      "link": "https://github.com/AlexeiCrystal/extera-plugins/raw/main/plugins/local_pin_1.6.1.plugin",
+      "state": "release",
+      "update_date": "20.08.2026",
+      "release_date": "20.08.2026",
+      "versions": {},
+      "sources": {
+        "clients": [
+          "exteraGram",
+          "AyuGram"
+        ],
+        "langs": [
+          "Python"
+        ]
+      }
     }
   ]
 }
