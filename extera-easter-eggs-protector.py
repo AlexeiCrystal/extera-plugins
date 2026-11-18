@@ -64,7 +64,7 @@ HANDLER_METHODS = (
     "handleNekogram",
 )
 
-GITHUB_URL = "https://github.com/AlexeiCrystal/extera-easter-eggs-protector"
+GITHUB_URL = "https://github.com/AlexeiCrystal/extera-plugins"
 
 LOCALIZED = {
     "ru": {
